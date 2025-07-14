@@ -1,0 +1,61 @@
+body {
+  background-color: #fff0f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heart {
+  width: 60px;
+  height: 54px;
+  background-color: #ccc;
+  position: relative;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 54px;
+  background-color: inherit;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -30px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 30px;
+}
+
+.heart.clicked {
+  background-color: #e60073;
+}
+
+.heart.clicked::before,
+.heart.clicked::after {
+  background-color: #e60073;
+}
+
+.counter {
+  font-size: 2rem;
+  color: #333;
+  min-width: 40px;
+  text-align: left;
+}
